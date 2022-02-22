@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: amerikan
-          image: quay.io/zt40/amerikan:test2
+          image: quay.io/zt40/amerikan:test3
           ports:
             - containerPort: 5010
