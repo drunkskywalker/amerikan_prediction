@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: amerikan-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: prediction
+  template:
+    metadata:
+      labels:
+        app: prediction
+    spec:
+      containers:
+        - name: amerikan
+          image: quay.io/zt40/amerikan:3.0
+          ports:
+            - containerPort: 5010
